@@ -16,7 +16,7 @@ Spacemacs is not really a program on its behalf; it's more like a infinite-power
 ```bash
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 ```
-and run ```emacs``` (because ```emacs``` reads the config file at the directory shown above at runtime and "behaves accordingly"). Indeed, this won't be enough ;'''D. The problem is that the last version of Spacemacs requires Emacs v.28.1, and Ubuntu 22 LTS has v27.1 installed. Thus, if you use ```apt-get``` you won't get the desired outcome.
+and run ```emacs``` (because ```emacs``` reads the config file at the directory shown above at runtime and "behaves accordingly"). Indeed, this won't be enough ;'''D (but you still have to run the previous command and clone the repo ofc). The problem is that the last version of Spacemacs requires Emacs v.28.1, and Ubuntu 22 LTS has v27.1 installed. Thus, if you use ```apt-get``` you won't get the desired outcome.
 
 Now, I SUGGEST to install the version 30.2 through
 ```bash
@@ -32,3 +32,13 @@ save, and run ```source ~/.bashrc``` or ```source ~/.zshrc``` to reload. This wi
 
 ## Configure Spacemacs to be able to use LaTeX
 
+Spacemacs allows to do infinite many things with files and things I can't even imagine. Since it's an OG software it has been created to be used without the help of the cursor. **Every single function you use is addressed by some keystroke.** This creates some misunderstandings at first, take your time. Once you are comfortable, press the sequence ```SPC f e d``` to open the Spacemacs configuration file through the Spacemacs interface. Navigate through the file and insert ```latex``` inside the ```dotspacemacs-configuration-layers``` section, like this
+```bash
+(setq dotspacemacs-configuration-layers
+  '(
+    ;; ... altri layer
+    latex
+    ;; ...
+  ))
+```
+(to insert text you'll have to press ```i```, insert text, then press ```esc``` [ the button ESC ]). Now save the file with ```SPC f s```, then, reload the configuration with ```SPC f e R```. This last command will make Spacemacs download the LaTeX package.
