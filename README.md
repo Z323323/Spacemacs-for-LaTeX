@@ -10,8 +10,8 @@ Let's get to the point as quick as possible.
 
 The very first thing you'll always have to do if you want to create LaTeX projects on your computer is to download the enigmatic ```texlive-full```. Don't get me wrong, you could still achieve some working solution without downloading ~7GB data package, but, if you don't want to always worry about lacking dependencies you should definitely install it. Now, if you have Ubuntu (I have 22.04 LTS and STILL, after many years, this "bug" is present) you'll probably face the cursed ```Pregenerating ConTeXt MarkIV format. This may take some time...```. If your installation goes fine then you won't have to solve. If not, then ```This may take some time...``` means ```This may take some eternities...```. Now, for some arcane reason you'll have to keep your ```ENTER``` button pushed down until it solves. There's been someone in the past who probably destroyed his keyboard doing this and solving by brute force.
 
-![MarkIVBugFix1](./MarkIVFormatBugFix1)
-![MarkIVBugFix2](./MarkIVFormatBugFix2)
+![MarkIVBugFix1](./MarkIVFormatBugFix1.png)
+![MarkIVBugFix2](./MarkIVFormatBugFix2.png)
 
 ## "Install" Spacemacs
 
