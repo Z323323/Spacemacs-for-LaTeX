@@ -8,7 +8,11 @@ Let's get to the point as quick as possible.
 
 ## Install TeX Live
 
-The very first thing you'll always have to do if you want to create LaTeX projects on your computer is to download the enigmatic ```texlive-full```. Don't get me wrong, you could still achieve some working solution without downloading ~7GB data package, but, if you don't want to always worry about lacking dependencies you should definitely install it. Now, if you have Ubuntu (I have 22.04 LTS and STILL, after many years, this "bug" is present) you'll probably face the cursed ```Pregenerating ConTeXt MarkIV format. This may take some time...```. If your installation goes fine then you won't have to solve. If not, then ```This may take some time...``` means ```This may take some eternities...```. Now, for some arcane reason you'll have to keep your ```ENTER``` button pushed down until it solves. There's been someone in the past who probably destroyed his keyboard doing this and solving by brute force.
+The very first thing you'll ~always have to do if you want to create LaTeX projects on your computer is to download the enigmatic ```texlive-full``` through
+```bash
+sudo apt-get install texlive-full
+```
+Don't get me wrong, you could still achieve some working solution without downloading ~7GB data package, but, if you don't want to always worry about lacking dependencies you should definitely install it. Now, if you have Ubuntu (I have 22.04 LTS and STILL, after many years, this "bug" is present) you'll probably face the cursed ```Pregenerating ConTeXt MarkIV format. This may take some time...```. If your installation goes fine then you won't have to solve. If not, then ```This may take some time...``` means ```This may take some eternities...```. Now, for some arcane reason you'll have to keep your ```ENTER``` button pushed down until it solves. There's been someone in the past who probably destroyed his keyboard doing this and solving by brute force.
 
 ![MarkIVBugFix1](./MarkIVFormatBugFix1.png)
 ![MarkIVBugFix2](./MarkIVFormatBugFix2.png)
@@ -32,6 +36,18 @@ Alright, now you have v30.2>v28.2 which should be fine (it is). Now, if you run 
 alias emacs='/snap/bin/emacs'
 ```
 then save, and run ```source ~/.bashrc``` or ```source ~/.zshrc``` to reload. This will redirect the ```emacs``` command to the right binary. Now, finally, run ```emacs```, and you'll be projected into the Space(macs). Set a couple of configurations (trivial, I suggest Vim [evil] mode) and let Spacemacs download some planets.
+
+### How it should be done for OhMyZsh
+
+Heading to the very end of ```~/.zshrc```, you'll see there's a clear note on how it should be made.
+
+![OhMyZshNote](OhMyZshNote.png)
+
+Now, if you take a look at ```env```, you'll realize ```$ZSH_CUSTOM``` hasn't really been set. I'm not sure how this works, but it simple in this case to imagine that **OhMyZsh** software take a look at alises define at ```$ZSH/custom/aliases.zsh```. Heading to ```~/.oh-my-zsh/custom``` folder you can see there's not a file named ```aliases.zsh```, then, we simply create it through
+```bash
+echo "alias emacs='/snap/bin/emacs'" > aliases.zsh
+```
+obtaining a clean modification. Now run ```emacs``` or (if it doesn't work) quit terminal then run ```emacs``` and you should be projected into the Space.
 
 ## Configure Spacemacs to be able to use LaTeX
 
