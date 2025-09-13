@@ -134,7 +134,21 @@ This last command is like an hidden gem, trust me. Now, either run ```C-v``` or 
 
 For what concerns the project stuff; Spacemacs after some operations should def recognise your folder as a LaTeX project by itself. You'll be sure about this if you see your project directory listed into the "projects" section in the Spacemacs homepage. This is helpful because you can head to any project directory in a comfortable manner by running ```SPC p p``` and chosing from results.
 
-## Another important note
+## Another couple important notes
 
 When dealing with complex formulas, real-time previews of ```pdf``` rendering is so valuable that not having such feature is a big handicap. Now, theoretically, Spacemacs should incorporate such feature, BUT, the whole implementation I gave you is fuckin broken, and barely works as a miracle. So, previews won't work (at least for me). It turns out that the best workaround for this, is to use [https://latexeditor.lagrida.com/] for complex formulas, then copy paste them.
+
+Once we start making satellites solution, another quick realization is that we could use ```gedit``` instead of Spacemacs to actually perform modifications to files. This is because even though Spacemacs is actually made to edit files in the best way possibile, it requires time to learn every shortcut, and: (this are the worst things for me) it's really slow when we scroll the file up and down, and it's a little bit too zoomed (I'm pretty sure this might be customized). If we open files with ```gedit``` and make our modifications splitting the screen in half where we keep in the right part the compiled ```pdf```, we obtain an experience which is basically the same as the one we'd get with Overleaf but with some handicaps (of course), being:
+
+- slowed compilation process (we must run ```C-c C-a``` ```C-c C-a``` ```C-c C-a``` then ```pdflatex --shell-escape -synctex=1 -interaction=nonstopmode main.tex``` from terminal to obtain a full compilation, but not every time 🌝)
+- slowed operations on formula (due to navigation to ```https://latexeditor.lagrida.com/``` back and forth)
+
+The second one of the two is not really a problem, since (once you are pro at writing formulas) you'll just use it for complex one, and anyway is not much time consuming. The first one is not a big problem because we'll need to perform a full compilation only if we need to compile bibliography and references which is something we can postpone or just not perform everytime. In every other case we'll just need to run
+```
+pdflatex --shell-escape -synctex=1 -interaction=nonstopmode main.tex | evince main.pdf
+```
+
+Below, an example of screen splitted to work on the project using ```gedit```.
+
+![Workspace](Workspace.png)
 
