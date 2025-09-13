@@ -31,7 +31,7 @@ sudo snap install emacs --classic
 ```
 Please, don't make the same error I made and think this will install the stable version of Emacs stopping the process, just let it download, otherwise it will be painful to solve.
 
-Alright, now you have v30.2>v28.2 which should be fine (it is). Now, if you run ```emacs``` you (guess what) won't get the desired outcome because the ```emacs``` version you downloaded is located at ```/snap/bin/emacs```, while the other version is located at ```/usr/bin/emacs``` and overrides the new version. In order to be able to solve this problem permanently, you'll have to head to ```~/.bashrc``` if you use ```bash```, or to ```~/.zshrc``` if you use ```zsh``` or **OhMyZsh** like I do. Now, edit the file with ```nano``` or whatever you use to edit files and put the following line into it
+Alright, now you have v30.2>v28.2 which should be fine (it is). Now, if you run ```emacs``` you (guess what) won't get the desired outcome because the ```emacs``` version you downloaded is located at ```/snap/bin/emacs```, while the other version is located at ```/usr/bin/emacs``` and overrides the new version. In order to be able to solve this problem permanently, you'll have to head to ```~/.bashrc``` if you use ```bash```, or to ```~/.zshrc``` if you use ```zsh``` or ```OhMyZsh``` like I do. Now, edit the file with ```nano``` or whatever you use to edit files and put the following line into it
 ```bash
 alias emacs='/snap/bin/emacs'
 ```
