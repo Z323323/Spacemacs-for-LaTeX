@@ -130,7 +130,7 @@ Now, it's not really important that Spacemacs recognise your project as such, bu
 ```
 pdflatex --shell-escape -synctex=1 -interaction=nonstopmode main.tex
 ```
-This last command is like an hidden gem, trust me. Now, either run ```C-v``` or ```evince main.pdf``` and look at what we made 🥹.
+This last command is like an hidden gem, trust me. Now, either run ```C-c C-v``` or ```evince main.pdf``` and look at what we made 🥹.
 
 For what concerns the project stuff; Spacemacs after some operations should def recognise your folder as a LaTeX project by itself. You'll be sure about this if you see your project directory listed into the "projects" section in the Spacemacs homepage. This is helpful because you can head to any project directory in a comfortable manner by running ```SPC p p``` and chosing from results.
 
