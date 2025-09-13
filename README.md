@@ -126,5 +126,11 @@ End of the story.
 
 ## Making the real magic
 
-Now, it's not really important that Spacemacs recognise your project as such, but it's quite helpful because in that case you'll see it listed on the Spacemacs homepage, which is useful. If you see Spacemacs doesn't recognise it as such, don't worry it will by itself. Now, the important part. Head to ```/your-project/main.tex``` by running ```SPC f f``` (search it and press ```ENTER```). Now, run ```C-c C-a``` (where ```C-``` = ```CTRL```). This will make Spacemacs to do some magic. Don't worry about 4738275273 errors you see, it's fine ;'''DDD. Now, re-run the same sequence. Keep an eye at prompts saying if bibliography is ok, etc. Run it like 3 times (should def be enough). Now, head to ```/your-project/``` from terminal and run ```pdflatex --shell-escape -synctex=1 -interaction=nonstopmode main.tex```. This last command is like an hidden gem, trust me. Now, either run ```C-v``` or ```evince main.pdf``` and look at what we made 🥹.
+Now, it's not really important that Spacemacs recognise your project as such, but it's quite helpful because in that case you'll see it listed on the Spacemacs homepage, which is useful. If you see Spacemacs doesn't recognise it as such, don't worry it will by itself. Now, the important part. Head to ```/your-project/main.tex``` by running ```SPC f f``` (search it and press ```ENTER```). Now, run ```C-c C-a``` (where ```C-``` = ```CTRL```). This will make Spacemacs to do some magic. Don't worry about 4738275273 errors you see, it's fine ;'''DDD. Now, re-run the same sequence. Keep an eye at prompts saying if bibliography is ok, etc. Run it like 3 times (should def be enough). Now, head to ```/your-project/``` from terminal and run 
+```
+pdflatex --shell-escape -synctex=1 -interaction=nonstopmode main.tex
+```
+This last command is like an hidden gem, trust me. Now, either run ```C-v``` or ```evince main.pdf``` and look at what we made 🥹.
+
+For what concerns the project stuff; Spacemacs after some operations should def recognise your folder as a LaTeX project by itself. You'll be sure about this if you see your project directory listed into the "projects" section in the Spacemacs homepage. This is helpful because you can head to any project directory in a comfortable manner by running ```SPC p p``` and chosing from results.
 
