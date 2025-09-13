@@ -43,7 +43,7 @@ Heading to the very end of ```~/.zshrc```, you'll see there's a clear note on ho
 
 ![OhMyZshNote](OhMyZshNote.png)
 
-Now, if you take a look at ```env```, you'll realize ```$ZSH_CUSTOM``` hasn't really been set. I'm not sure how this works, but it's simple in this case to imagine that ```OhMyZsh``` software take a look at alises define at ```$ZSH/custom/aliases.zsh```. Heading to ```~/.oh-my-zsh/custom``` folder you can see there's not a file named ```aliases.zsh```, then, we simply create it through
+Now, if you take a look at ```env```, you'll realize ```$ZSH_CUSTOM``` hasn't really been set. I'm not sure how this works, but it's simple in this case to imagine that ```OhMyZsh``` software take a look at alises defined at ```$ZSH/custom/aliases.zsh```. Heading to ```~/.oh-my-zsh/custom``` folder you can see there's not a file named ```aliases.zsh```, then, we simply create it through
 ```bash
 echo "alias emacs='/snap/bin/emacs'" > aliases.zsh
 ```
