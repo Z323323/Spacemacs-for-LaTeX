@@ -134,3 +134,7 @@ This last command is like an hidden gem, trust me. Now, either run ```C-v``` or 
 
 For what concerns the project stuff; Spacemacs after some operations should def recognise your folder as a LaTeX project by itself. You'll be sure about this if you see your project directory listed into the "projects" section in the Spacemacs homepage. This is helpful because you can head to any project directory in a comfortable manner by running ```SPC p p``` and chosing from results.
 
+## Another important note
+
+When dealing with complex formulas, real-time previews of pdf rendering is so valuable that not having such feature is a big handicap. Now, theoretically, Spacemacs should incorporate such feature, BUT, the whole implementation I gave you is fuckin broken, and barely works as a miracle. So, previews won't work (at least for me). It turns out that the best workaround for this, is to use [https://latexeditor.lagrida.com/] for complex formulas, then copy paste them.
+
